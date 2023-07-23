@@ -12,7 +12,7 @@ export const Item=(props)=>{
         <div>
             <h5>{props.nombre}</h5>
             <p>precio:${props.precio}</p>
-            <p>id {props.id}</p>
+            
             <NavLink to={`/${categoria}/${props.id}`}>ver detalles</NavLink>
 
 

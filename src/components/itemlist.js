@@ -13,7 +13,7 @@ export const ItemList=()=>{
         <>
         <h1>{categoria}</h1>
         {
-            productos.map(prod=>{
+            productos.map(prod=>{   // por cada producto se renderiza un componente <Item/>
                 return <Item key={prod.id} nombre={prod.nombre} precio={prod.precio} id={prod.id} categoria={prod.categoria}  />
             })
         }
