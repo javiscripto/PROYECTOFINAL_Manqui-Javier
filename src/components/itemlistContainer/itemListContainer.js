@@ -1,6 +1,6 @@
 // este es el componente que será devuelto en Main
 
-import { ItemList } from "./itemlist";
+import { ItemList } from "../itemlist";
 
 
 

@@ -7,6 +7,62 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 2rem;
+}
+.card-img{
+  width: 18rem;
+}
+
+.card{
+  width: 300px;
+}
+.boton-detalles{
+  border-radius: 8px;
+}
+
+.detail-link{
+  background-color: rgb(138, 166, 188);
+  color: aliceblue;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: .8s;
+}
+.detail-link:hover{
+ 
+  transform: scale(1.2)
+}
+.nav-container{
+  display: flex;
+  height: 50px;
+ background-color: rgb(12, 36, 59);
+}
+.nav-list{
+  display: inline-block;
+  gap: 1rem;
+}
+.nav-item{
+  display: inline-block;
+  margin: .2rem;
+  padding: .2rem;
+  text-decoration: none;
+  color: white;
+}
+.nav-item::first-letter{
+  color: rgb(255, 153, 0);
+  font-size: large;
+}
+
+
+
+
+
+
+
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

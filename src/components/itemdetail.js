@@ -14,9 +14,15 @@ export const ItemDetail=()=>{
 
     
     return(
-        <div>
+        <div className=" card card-detail">
+                <img src={producto.imagen} alt="" />
                 <h3>{producto.nombre}</h3>
                 <p>precio:${producto.precio} CLP</p>
+                <div className="card-acciones">
+                <button >+</button>
+                <button >-</button>
+            </div>
+            <button >agregar al carrito</button>
 
         </div>
     )
