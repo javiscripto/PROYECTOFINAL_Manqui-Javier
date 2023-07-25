@@ -55,7 +55,11 @@ body {
   color: rgb(255, 153, 0);
   font-size: large;
 }
-
+.nav-cart{
+  color: white;
+  display: flex;
+  gap: .2rem;
+}
 
 
 
