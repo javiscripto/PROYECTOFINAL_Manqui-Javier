@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { filtrarCategoria } from "../asyncMock/asyncMock";
+import { filtrarCategoria } from "../../asyncMock/asyncMock";
 import { Item } from "./item";
 
 export const ItemList = () => {

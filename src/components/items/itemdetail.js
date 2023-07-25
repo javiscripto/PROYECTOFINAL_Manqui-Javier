@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom"
-import { filtrarId } from "../asyncMock/asyncMock";
+import { filtrarId } from "../../asyncMock/asyncMock";
 
 export const ItemDetail=()=>{
     const {id}=useParams();
