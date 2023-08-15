@@ -29,7 +29,7 @@ export function ItemListContainer() {
           );
         })
         .finally(() => setCargando(false)); 
-    }, 800);
+    }, 500);
   }, [categoria]);
 
   

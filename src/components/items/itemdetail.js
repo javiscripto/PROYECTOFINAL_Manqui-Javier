@@ -18,9 +18,6 @@ export const ItemDetail = () => {
   //    ACCIONES HANDLERS
 
 
-  
-  
-
   return (
     <div className=" card card-detail">
       <img src={producto.imagen} alt="" />

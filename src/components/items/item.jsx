@@ -11,7 +11,7 @@ export const Item = (props) => {
         <h5>{props.nombre}</h5>
         <p>precio:${props.precio}</p>
 
-        <NavLink className="detail-link" to={`/${categoria}/${props.id}`}>ver detalles</NavLink>
+        <NavLink className="detail-link" to={categoria?(`/${categoria}/${props.id}`):(`/${props.categoria}/${props.id}`)}>ver detalles</NavLink>
       </div>
     </div>
   );

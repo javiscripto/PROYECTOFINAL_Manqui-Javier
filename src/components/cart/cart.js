@@ -9,10 +9,9 @@ export const Carrito=()=>{
     const { carrito} = useContext(CartContext);
 
 
-
     return (
         <>
-          {carrito ? (
+          {carrito.length>0 ? (
             carrito.map((prod) => (
               <div key={prod.id}>
                 <p>{prod.nombre}</p>
@@ -21,8 +20,8 @@ export const Carrito=()=>{
               </div>
             ))
           ) : (
-            <h3>el carrito esta vacío</h3>
-          )}
+            <h3>el carrito esta vacío :( </h3>
+         )}
         </>
       );
     };
