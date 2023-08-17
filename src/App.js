@@ -5,8 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { ItemListContainer } from './components/itemlistContainer/itemListContainer';
 import { ItemDetail } from './components/items/itemdetail';
 import NavBar from './components/nav/Navbar';
-import { CartContext } from './cartContext/context';
-import { useState } from 'react';
+import {  CartProvider } from './cartContext/context';
 import { Carrito } from './components/cart/cart';
 
 
@@ -15,14 +14,14 @@ import { Carrito } from './components/cart/cart';
 
 function App() {
 
-    const [carrito,setCarrito]=useState([])
-
-
+ 
 
 
   return (
+    
     <div className="App">
-      <CartContext.Provider value={{carrito,setCarrito}}>
+      <CartProvider>
+     
       <BrowserRouter>
         <NavBar/>
         <main>
@@ -42,8 +41,9 @@ function App() {
       
       
       </BrowserRouter>
-      </CartContext.Provider>
       
+      
+    </CartProvider>
     </div>
   );
 }

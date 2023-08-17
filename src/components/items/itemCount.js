@@ -1,15 +1,16 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../../cartContext/context";
 
 export const ItemCount = ({ producto }) => {
   const [cantidad, setCantidad] = useState(0);
-  //let [carritoLocal, setLocal] = useState([]);
 
-  const { carrito, setCarrito } = useContext(CartContext);
-
+  const {carrito, agregarPCarrito } = useContext(CartContext);
 
 
-
+useEffect(()=>{
+  setCantidad(0)
+}
+,[carrito])
 
   ///////////////////// handlers ////////////////////////
 
@@ -23,23 +24,23 @@ export const ItemCount = ({ producto }) => {
     }
   };
 
-  const handlerAgregar = () => {
-    if (cantidad > 0) {
-      let carritoLocal=[...carrito] // copia del carrito del context
-      const productoAgregado = { ...producto, cantidad };
+  // const handlerAgregar = () => {
+  //   if (cantidad > 0) {
+  //     let carritoLocal=[...carrito] // copia del carrito del context
+  //     const productoAgregado = { ...producto, cantidad };
 
-      const itemExistente= carritoLocal.find((p=>p.nombre===productoAgregado.nombre)) 
+  //     const itemExistente= carritoLocal.find((p=>p.nombre===productoAgregado.nombre)) 
 
-      if(itemExistente){
-       itemExistente.cantidad=itemExistente.cantidad+cantidad;
-       setCarrito(carritoLocal)
-      }else{
-        setCarrito([...carrito,productoAgregado])
-      }
+  //     if(itemExistente){
+  //      itemExistente.cantidad=itemExistente.cantidad+cantidad;
+  //      setCarrito(carritoLocal)
+  //     }else{
+  //       setCarrito([...carrito,productoAgregado])
+  //     }
 
-      setCantidad(0);
-    }
-  };
+  //     setCantidad(0);
+  //   }
+  // };
 
   return (
     <div className="itemcount">
@@ -48,7 +49,7 @@ export const ItemCount = ({ producto }) => {
         <p>{cantidad}</p>
         <button onClick={handlerRestar}>-</button>
       </div>
-      <button onClick={handlerAgregar}>agregar al carrito</button>
+      <button onClick={()=>{agregarPCarrito(producto,cantidad)}}>agregar al carrito</button>
     </div>
   );
 };
