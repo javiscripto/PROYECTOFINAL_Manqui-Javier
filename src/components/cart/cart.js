@@ -16,7 +16,7 @@ export const Carrito=()=>{
               <div key={prod.id}>
                 <p>{prod.nombre}</p>
                 <p>${prod.precio}</p>
-                <p>{prod.cantidad}</p>
+                <p>cantidad: {prod.cantidad}</p>
               </div>
             ))
           ) : (

@@ -15,7 +15,7 @@ export const ItemDetail = () => {
       setProducto({ ...resp.data() });
     });
   }, [id]);
-  //    ACCIONES HANDLERS
+  
 
 
   return (

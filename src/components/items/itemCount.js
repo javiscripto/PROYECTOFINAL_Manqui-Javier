@@ -3,7 +3,15 @@ import { CartContext } from "../../cartContext/context";
 
 export const ItemCount = ({ producto }) => {
   const [cantidad, setCantidad] = useState(0);
+  //let [carritoLocal, setLocal] = useState([]);
+
   const { carrito, setCarrito } = useContext(CartContext);
+
+
+
+
+
+  ///////////////////// handlers ////////////////////////
 
   const handlerSumar = () => {
     setCantidad(cantidad + 1);
@@ -17,12 +25,21 @@ export const ItemCount = ({ producto }) => {
 
   const handlerAgregar = () => {
     if (cantidad > 0) {
-        const nuevoCarrito= [...carrito, producto];
-        setCarrito(nuevoCarrito)
+      let carritoLocal=[...carrito] // copia del carrito del context
+      const productoAgregado = { ...producto, cantidad };
+
+      const itemExistente= carritoLocal.find((p=>p.nombre===productoAgregado.nombre)) 
+
+      if(itemExistente){
+       itemExistente.cantidad=itemExistente.cantidad+cantidad;
+       setCarrito(carritoLocal)
+      }else{
+        setCarrito([...carrito,productoAgregado])
+      }
+
+      setCantidad(0);
     }
   };
-
-
 
   return (
     <div className="itemcount">
