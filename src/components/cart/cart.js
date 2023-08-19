@@ -8,14 +8,14 @@ export const Carrito = () => {
     <div className="container-fluid">
       {carrito.length > 0 ? (
         carrito.map((prod) => (
-          <div key={prod.id} className="card">
-            <h3>{prod.nombre}</h3>
-            <p>cantidad: {prod.cantidad}</p>
-            <p>precio unit.:${prod.precio}</p>
-            <p>precio total: ${prod.precio * prod.cantidad}</p>
+          <div key={prod.id} className="cart-container">
             <div className="img">
               <img src={prod.imagen} className="imagen-cart" alt="imagen del producto" />
             </div>
+            <h5>{prod.nombre}</h5>
+            <p>cantidad: {prod.cantidad}</p>
+            <p>precio unit.:${prod.precio}</p>
+            <p>precio total: ${prod.precio * prod.cantidad}</p>
           </div>
         ))
       ) : (

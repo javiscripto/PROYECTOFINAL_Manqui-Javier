@@ -19,11 +19,19 @@ export const ItemDetail = () => {
 
 
   return (
-    <div className=" card card-detail">
-      <img src={producto.imagen} alt="" />
+    <div className=" card-detail">
+      <div >
+      <img className="card-img" src={producto.imagen} alt="" />
+      </div>
+
+
+      <div className="card-text">
+      
       <h3>{producto.nombre}</h3>
       <p>{producto.descripcion}</p>
       <p>precio:${producto.precio} CLP</p>
+      </div>
+
       <div className="card-acciones">
         <ItemCount producto={producto}/>
       </div>

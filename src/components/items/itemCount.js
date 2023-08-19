@@ -29,11 +29,11 @@ useEffect(()=>{
   return (
     <div className="itemcount">
       <div className="handlers">
-        <button onClick={handlerSumar}>+</button>
+        <button className="handler-item" onClick={handlerSumar}>+</button>
         <p>{cantidad}</p>
-        <button onClick={handlerRestar}>-</button>
+        <button className="handler-item" onClick={handlerRestar}>-</button>
       </div>
-      <button onClick={()=>{agregarPCarrito(producto,cantidad)}}>agregar al carrito</button>
+      <button className="handler-item" onClick={()=>{agregarPCarrito(producto,cantidad)}}>agregar al carrito</button>
     </div>
   );
 };
