@@ -22,6 +22,7 @@ export const ItemDetail = () => {
     <div className=" card card-detail">
       <img src={producto.imagen} alt="" />
       <h3>{producto.nombre}</h3>
+      <p>{producto.descripcion}</p>
       <p>precio:${producto.precio} CLP</p>
       <div className="card-acciones">
         <ItemCount producto={producto}/>

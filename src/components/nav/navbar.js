@@ -6,6 +6,9 @@ import { CartWidget } from "./cartWidget";
 const NavBar = () => {
   return (
     <div className="nav-container">
+      <div className="logo-container">
+        <h2>GuitarraStore</h2>
+      </div>
       <div className="nav-list">
         <NavLink className="nav-item" to="/">Inicio</NavLink>
         <NavLink className="nav-item" to="/guitarras">Guitarras</NavLink>
@@ -13,7 +16,7 @@ const NavBar = () => {
         <NavLink className="nav-item" to="/pedales">Pedales</NavLink>
       </div>
       <div className="nav-cart">
-      <Link to="/carrito">
+      <Link className="nav-item" to="/carrito">
       <CartWidget/>
       </Link>
       
