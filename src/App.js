@@ -7,6 +7,7 @@ import { ItemDetail } from './components/items/itemdetail';
 import NavBar from './components/nav/Navbar';
 import {  CustomProvider } from './cartContext/context';
 import { Carrito } from './components/cart/cart';
+import { Payment } from './components/payment/payment';
 
 
 
@@ -30,6 +31,7 @@ function App() {
               <Route path='/:categoria' element={<ItemListContainer/>} />
               <Route path='/:categoria/:id' element={<ItemDetail/>}  />
               <Route path='/carrito' element={<Carrito/>} />
+              <Route path='/payment' element={<Payment/> }/>
 
 
 

@@ -6,7 +6,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.link{
+  text-decoration: none;
+}
+.bi-trash3:hover{
+  color: rgb(255, 0, 0);
+  cursor: pointer;
+}
 .container{
   display: flex;
   flex-wrap: wrap;
@@ -61,10 +67,11 @@ body {
   width: 100px;
 }
 .detail-link{
-  background-color: rgb(138, 166, 188);
+  background-color: rgb(12, 36, 59);
   color: aliceblue;
   border-radius: 5px;
   text-decoration: none;
+  transition: .1s;
 }
 .detail-link:hover{
  

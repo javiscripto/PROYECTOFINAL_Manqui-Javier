@@ -35,9 +35,19 @@ export const CustomProvider = ({ children }) => {
       return acc+prod.cantidad;
     },0)
   }
+  const eliminarItem=(producto)=>{
+    let carritoLocal=[...carrito];
+    let indexItem= carritoLocal.indexOf(producto)
+    carritoLocal.splice(indexItem,1)
+    setCarrito(carritoLocal)
+    
+  }
 
+  const vaciarCarrito=()=>{
+    setCarrito([])
+  }
   return (
-    <CartContext.Provider value={{ carrito, agregarPCarrito, totalCarrito, totalItems }}>
+    <CartContext.Provider value={{ carrito, agregarPCarrito, totalCarrito, totalItems, eliminarItem, vaciarCarrito}}>
       {children}
     </CartContext.Provider>
   );

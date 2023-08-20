@@ -17,7 +17,6 @@ export const ItemDetail = () => {
   }, [id]);
   
 
-
   return (
     <div className=" card-detail">
       <div >
