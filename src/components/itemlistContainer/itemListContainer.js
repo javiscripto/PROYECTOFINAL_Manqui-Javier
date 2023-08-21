@@ -29,7 +29,7 @@ export function ItemListContainer() {
           );
         })
         .finally(() => setCargando(false)); 
-    }, 500);
+    }, 400);
   }, [categoria]);
 
   
@@ -42,6 +42,7 @@ export function ItemListContainer() {
           <p>cargando...</p>
         </div>
       ) : (
+        
         <ItemList productos={productos}/>
       )}
     </>

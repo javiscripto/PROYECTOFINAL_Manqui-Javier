@@ -1,4 +1,7 @@
 import { createContext, useState } from "react";
+import { ToastContainer,toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+
 
 export const CartContext = createContext();
 
@@ -19,9 +22,12 @@ export const CustomProvider = ({ children }) => {
       if (itemExistente) {
         itemExistente.cantidad = itemExistente.cantidad + cantidad;
         setCarrito(carritoLocal);
+        
       } else {
         setCarrito([...carrito, productoAgregado]);
+        
       }
+      toast(`se ha agregado ${producto.nombre} al carrito`);
     }
   };
 
@@ -49,6 +55,7 @@ export const CustomProvider = ({ children }) => {
   return (
     <CartContext.Provider value={{ carrito, agregarPCarrito, totalCarrito, totalItems, eliminarItem, vaciarCarrito}}>
       {children}
+      <ToastContainer/>
     </CartContext.Provider>
   );
 };

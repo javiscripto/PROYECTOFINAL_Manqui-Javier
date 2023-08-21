@@ -12,7 +12,7 @@ useEffect(()=>{
 }
 ,[carrito])
 
-  ///////////////////// handlers ////////////////////////
+  
 
   const handlerSumar = () => {
     setCantidad(cantidad + 1);
