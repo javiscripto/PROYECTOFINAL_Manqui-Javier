@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { ItemListContainer } from './components/itemlistContainer/itemListContainer';
 import { ItemDetail } from './components/items/itemdetail';
-import NavBar from './components/nav/Navbar';
+import navBar from './components/nav/Navbar';
 import {  CustomProvider } from './cartContext/context';
 import { Carrito } from './components/cart/cart';
 import { Payment } from './components/payment/payment';
@@ -24,7 +24,7 @@ function App() {
       <CustomProvider>
      
       <BrowserRouter>
-        <NavBar/>
+        <navBar/>
         <main>
             <Routes>
               <Route path='/' element={<ItemListContainer/>} />
